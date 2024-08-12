@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    display: flex;
+    /* Activa el modelo de diseño Flexbox en el contenedor. Esto convierte al contenedor en un contenedor flex, y sus elementos hijos se convierten en ítems flexibles. Flexbox permite un diseño más flexible y eficiente en la distribución de los elementos.un contenedor flex proporciona un sistema de diseño flexible que facilita la alineación, distribución y organización de los ítems dentro del contenedor.*/
+    justify-content: center;
+    /*Afecta la distribución de los ítems a lo largo del eje principal (que por defecto es el eje horizontal).*/
+    align-items: center;
+    /*Alinea los ítems flexibles a lo largo del eje transversal (vertical por defecto) en el centro del contenedor*/
+    height: 100vh;
+    /* Establece la altura del contenedor en 100% de la altura de la ventana del navegador (viewport). */
+    background-color: hsl(0, 0%, 95%);
+
+}
+#calculator{
+    font-family: Arial, sans-serif;
+    /*el texto se muestra en la fuente Arial si está disponible, o en cualquier otra fuente sans-serif si Arial no está instalada en el sistema del usuario.*/
+    background-color: hsl(0, 0%, 15%);
+    /*define un color de fondo muy oscuro, casi negro, con una luminosidad del 15% y sin saturación (por lo que no tiene matiz de color)*/
+    border-radius: 15px;
+    /*Esto redondea las esquinas del elemento al aplicar un radio de 15 píxeles. Se usa para dar un efecto de borde curvado.*/
+    max-width: 500px;
+    /*Establece el ancho máximo del elemento en 500 píxeles. Si el contenido del elemento es más ancho que 500 píxeles, el elemento no se expandirá más allá de ese tamaño.*/
+    overflow: hidden;
+    /*Oculta cualquier contenido que se desborde del área del elemento. Esto significa que cualquier contenido que sobresalga de los límites del elemento no se mostrará y se recortará.*/
+}
+#display{
+    width: 100%;
+    /*Establece el ancho del elemento al 100% del ancho de su contenedor padre. Esto significa que el elemento ocupará todo el espacio horizontal disponible en su contenedor.*/
+    padding: 20px;
+    /*Agrega un espacio interior de 20 píxeles alrededor del contenido del elemento, dentro de sus bordes. El padding se aplica a todos los lados del elemento (superior, derecho, inferior e izquierdo).*/
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: hsl(0, 0%, 20px);
+}
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsl(0, 0%, 40%);
+}
+/* Selecciona el estado del botón cuando el cursor está sobre él (es decir, el "hover" o "sobrecursor"). este estilo cambiará el color de fondo del botón a un gris oscuro cuando el usuario pase el cursor sobre él.*/
+button:active{
+    background-color: hsl(0, 0%, 50%);
+}
+/*define cómo debe cambiar el aspecto del botón cuando está siendo activado por el usuario.este estilo cambiará el color de fondo del botón a un gris medio cuando el usuario esté presionando o activando el botón.*/
+.operator-btn{
+    background-color: hsl(35, 100%, 55%);
+}
+.operator-btn:hover{
+    background-color: hsl(35, 100%, 65%);
+}
+.operator-btn:active{
+    background-color: hsl(35, 100%, 75%);
+}
